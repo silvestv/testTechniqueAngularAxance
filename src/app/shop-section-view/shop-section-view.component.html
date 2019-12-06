@@ -1,0 +1,26 @@
+<section id="shop">
+  <div class="shop-window">
+    <h3 id="shopTitle">Shop</h3>
+    <mat-nav-list class="list-menu-horizontal" >
+      <a mat-list-item  routerLinkActive="active" routerLink="/home/hf" (click)="filter2 = 'hf'">Home Furnishings</a>
+      <a mat-list-item  routerLinkActive="active" routerLink="/home/acc"(click)="filter2 = 'acc'">Accessories</a>
+      <a mat-list-item  routerLinkActive="active" routerLink="/home/sp" (click)="filter2 = 'sp'">Sports</a>
+      <a mat-list-item  routerLinkActive="active" routerLink="/home/cloth" (click)="filter2 = 'cl'">Clothing</a>
+    </mat-nav-list>
+    <div id="slideshow-container">
+      <app-slide-show></app-slide-show>
+    </div>
+    <label>
+      <input type="radio" name="test" value="small" checked (click)="filter1 = 'in'" >
+      <img src="http://placehold.it/40x60/0bf/fff&text=A">
+    </label>
+
+    <label>
+      <input type="radio" name="test" value="big" (click)="filter1 = 'out'">
+      <img src="http://placehold.it/40x60/b0f/fff&text=B">
+    </label>
+    <button mat-flat-button>Shop Now</button>
+  </div>
+  <app-popular-section-view></app-popular-section-view>
+  <app-collections-section-view></app-collections-section-view>
+</section>
