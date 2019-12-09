@@ -2,16 +2,16 @@
   <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
     <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
   </a>
-  <a mat-list-item [routerLink]="['/home/']" fragment="shop" (click)="onSidenavClose()">
+  <a mat-list-item routerLink="/home" fragment="shop" (click)="onSidenavClose('shop')">
     <mat-icon>store</mat-icon> <span class="nav-caption">Shop</span>
   </a>
-  <a mat-list-item  [routerLink]="['/home/']" fragment="popular" (click)="onSidenavClose()">
+  <a mat-list-item  routerLink="/home" fragment="popular" (click)="onSidenavClose('popular')">
     <mat-icon>trending_up</mat-icon><span class="nav-caption">Popular</span>
   </a>
-  <a mat-list-item  [routerLink]="['/home/']" fragment="collections" (click)="onSidenavClose()">
+  <a mat-list-item  [routerLink]="['/home/']" fragment="collections" (click)="onSidenavClose('collections')">
     <mat-icon>collections_bookmark</mat-icon><span class="nav-caption">Collections</span>
   </a>
-  <a mat-list-item  [routerLink]="['/home/']" fragment="newsletter" (click)="onSidenavClose()">
+  <a mat-list-item  [routerLink]="['/home/']" fragment="newsletter" (click)="onSidenavClose('newsletter')">
     <mat-icon>new_releases</mat-icon><span class="nav-caption">NewsLetter</span>
   </a>
   <a mat-list-item routerLink="/productListing" (click)="onSidenavClose()">

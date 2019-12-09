@@ -3,6 +3,9 @@
 
 .shop-window{
   width: 100%;
+  position: relative;
+
+
 
   @media screen and (min-width: 600px){
      .list-menu-horizontal{
@@ -30,8 +33,26 @@
     }
   }
 
-  mat-nav-list a.active {
-    background-color: lightgray;
+  mat-nav-list {
+    a:focus {
+      background-color: lightgray;
+    }
+
+    .active {
+      background-color: lightgray;
+    }
   }
 
+  .svg-container{
+    .checked{
+      fill: lightgray;
+      opacity: 0.3;
+    }
+  }
 }
+
+.eloign{
+  height: 1200px;
+}
+
+

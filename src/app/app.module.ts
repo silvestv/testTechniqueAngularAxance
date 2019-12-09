@@ -19,6 +19,10 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import {MatButtonModule} from '@angular/material/button';
 import {SlideshowService} from './services/slideshow.service';
+import {ItemsService} from './services/items.service';
+import { ItemComponent } from './item/item.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +37,8 @@ import {SlideshowService} from './services/slideshow.service';
     FourHoFourComponent,
     HeaderComponent,
     SideNavListComponent,
-    SlideShowComponent
+    SlideShowComponent,
+    ItemComponent
 
   ],
   imports: [
@@ -46,9 +51,16 @@ import {SlideshowService} from './services/slideshow.service';
     MatIconModule,
     MatListModule,
     SlideshowModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
+
   ],
-  providers: [SlideshowService],
+  providers: [
+    SlideshowService,
+    ItemsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

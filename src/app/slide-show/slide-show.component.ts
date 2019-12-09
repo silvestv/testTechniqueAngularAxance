@@ -1,6 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {IImage} from 'ng-simple-slideshow';
-import {AppareilService} from '../../../../TPs/openclassroomCourse/mon-projet-angular/src/app/services/appareil.service';
 import {SlideshowService} from '../services/slideshow.service';
 import {Subscription} from 'rxjs';
 

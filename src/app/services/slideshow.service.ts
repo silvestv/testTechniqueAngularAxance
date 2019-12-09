@@ -6,86 +6,110 @@ import {Subject} from 'rxjs';
 @Injectable()
 export class SlideshowService {
 
-  // DATA SLIDESHOW
+  // DATA SLIDESHOW de type IImage from 'ng-simple-slideshow'
   // Home furnishing indoor image
 
   private imagehfi1: IImage = {
-    url:  '../../assets/images/hf1.jpeg',
+    url:  '../../assets/images/slideshow/hf1.jpeg',
     caption: 'un beau canapé',
   };
 
   private imagehfi2: IImage = {
-    url:  '../../assets/images/hf2.jpg',
-    caption: 'un beau bureau',
+    url:  '../../assets/images/slideshow/hf2.jpg',
+    caption: 'une belle table',
   };
 
   private imagehfi3: IImage = {
-    url:  '../../assets/images/hf3.jpeg',
+    url:  '../../assets/images/slideshow/hf3.jpeg',
     caption: 'un beau lit',
   };
 
   // home furnishing outdoor image
   private imagehfo1: IImage = {
-    url:  '../../assets/images/hf1.jpeg',
+    url:  '../../assets/images/slideshow/hfo1.jpg',
     caption: 'un beau canapé',
   };
 
   private imagehfo2: IImage = {
-    url:  '../../assets/images/hf2.jpg',
+    url:  '../../assets/images/slideshow/hfo2.jpeg',
     caption: 'un beau bureau',
   };
 
   private imagehfo3: IImage = {
-    url:  '../../assets/images/hf3.jpeg',
+    url:  '../../assets/images/slideshow/hfo3.jpeg',
     caption: 'un beau lit',
   };
 
   // accessorie indoor image
   private imageai1: IImage = {
-    url:  '../../assets/images/hf1.jpeg',
-    caption: 'un beau canapé',
+    url:  '../../assets/images/slideshow/accin1.jpeg',
+    caption: 'un beau luminion',
   };
 
   private imageai2 = {
-    url:  '../../assets/images/hf2.jpg',
-    caption: 'un beau bureau',
+    url:  '../../assets/images/slideshow/accin2.jpg',
+    caption: 'un beau portant',
   };
 
   // accessorie outdoor image
   private imageao1: IImage = {
-    url:  '../../assets/images/hf3.jpeg',
+    url:  '../../assets/images/slideshow/accou1.jpeg',
     caption: 'un beau lit',
   };
 
   private imageao2: IImage = {
-    url:  '../../assets/images/hf1.jpeg',
+    url:  '../../assets/images/slideshow/accou2.jpeg',
     caption: 'un beau canapé',
   };
 
   // sport image indoor
   private imagesi1: IImage = {
-    url:  '../../assets/images/hf2.jpg',
-    caption: 'un beau bureau',
+    url:  '../../assets/images/slideshow/sportin1.jpeg',
+    caption: 'une belle turbine',
   };
 
   private imagesi2: IImage = {
-    url:  '../../assets/images/hf2.jpg',
-    caption: 'un beau bureau',
+    url:  '../../assets/images/slideshow/sportin2.jpeg',
+    caption: 'un beau billard',
   };
 
   // sport image outdoor
   private imageso1: IImage = {
-    url:  '../../assets/images/hf3.jpeg',
+    url:  '../../assets/images/slideshow/sportout1.jpeg',
     caption: 'un beau lit',
   };
 
 
   private imageso2: IImage = {
-    url:  '../../assets/images/hf3.jpeg',
+    url:  '../../assets/images/slideshow/sportout2.jpeg',
     caption: 'un beau lit',
   };
 
-  //Serialization des datas
+  // clothes image indoor
+  private imagecli1: IImage = {
+    url:  '../../assets/images/slideshow/clothin1.jpeg',
+    caption: 'un beau étendoire',
+  };
+
+
+  private imagecli2: IImage = {
+    url:  '../../assets/images/slideshow/clothin2.jpg',
+    caption: 'un beau porte-serviette',
+  };
+
+  // clothes image outdoor
+  private imageclo1: IImage = {
+    url:  '../../assets/images/slideshow/clothout1.jpg',
+    caption: 'un beau lit',
+  };
+
+
+  private imageclo2: IImage = {
+    url:  '../../assets/images/slideshow/clothout2.jpeg',
+    caption: 'un beau lit',
+  };
+
+  // Serialization des datas
   private imageUrlArrayHFIn: IImage[] = [
     this.imagehfi1,
     this.imagehfi2,
@@ -118,28 +142,45 @@ export class SlideshowService {
     this.imageso2
   ];
 
+  private imageUrlArrayClothIn: IImage[] = [
+    this.imagecli1,
+    this.imagecli2
+  ];
 
-  //web service
-  private contentSlideshow: IImage[] = []
-  //manipulation des données sous design pattern observable
+  private imageUrlArrayClothOut: IImage[] = [
+    this.imageclo1,
+    this.imageclo2
+  ];
+
+
+
+
+  ///////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////
+
+  // web service
+  private contentSlideshow: IImage[] = [];
+  // manipulation des données sous design pattern observable
   contentSlideshowSubject = new Subject<IImage[]>();
 
   constructor() {}
 
-  //emission à chaque chagement pour un abonnement d'un composant au sujet
+  // emission à chaque chagement pour un abonnement d'un composant au sujet
   emitlistImagesSubject() {
       this.contentSlideshowSubject.next(this.contentSlideshow);
 
     }
-    //setter selon les filtres
+    // setter selon les filtres
     setContentSlideshow(filter1: string, filter2: string) {
       if (filter1 === 'in') {
         if (filter2 === 'hf') {
           this.contentSlideshow = this.imageUrlArrayHFIn;
         } else if (filter2 === 'acc') {
           this.contentSlideshow = this.imageUrlArrayAccIn;
-        } else {
+        } else if (filter2 === 'sp'){
           this.contentSlideshow = this.imageUrlArraySportIn;
+        } else {
+          this.contentSlideshow = this.imageUrlArrayClothIn;
         }
       } else {
 
@@ -147,8 +188,10 @@ export class SlideshowService {
           this.contentSlideshow = this.imageUrlArrayHFOut;
         } else if (filter2 === 'acc') {
           this.contentSlideshow = this.imageUrlArrayAccOut;
-        } else {
+        } else if (filter2 === 'sp') {
           this.contentSlideshow = this.imageUrlArraySportOut;
+        } else {
+          this.contentSlideshow = this.imageUrlArrayClothOut;
         }
 
       }

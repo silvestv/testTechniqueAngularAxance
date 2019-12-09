@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Clock",
+    "brand": "Interior",
+    "price": 50,
+    "collection": "Decor",
+    "imgUrl": "../../assets/images/items/clock1.jpg",
+    "rate": 5
+  },
+  {
+    "id": 2,
+    "name": "Lamp",
+    "brand": "Ikea",
+    "price": 80,
+    "collection": "Luminaire",
+    "imgUrl": "../../assets/images/items/lamp1.jpg",
+    "rate": 2
+  }
+]

@@ -5,16 +5,18 @@ import {ProductListingPageViewComponent} from './product-listing-page-view/produ
 
 
 const routes: Routes = [
-  {path: 'home/hf', component: HomePageViewComponent},
+  {path: '', redirectTo: '/productListing', pathMatch: 'full'},
+  {path: 'home', component: HomePageViewComponent},
   {path: 'home/:id', component: HomePageViewComponent},
-  {path: 'productListing', component: ProductListingPageViewComponent},
-  {path: '', redirectTo: '/home', pathMatch: 'full'}
+  {path: 'productListing', component: ProductListingPageViewComponent}
+
 
 ];
 
 const routerOptions: ExtraOptions = {
-  useHash: false,
   anchorScrolling: 'enabled',
+  onSameUrlNavigation: 'reload',
+  scrollPositionRestoration: 'enabled'
 };
 
 @NgModule({
