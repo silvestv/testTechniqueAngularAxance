@@ -33,10 +33,28 @@ export class ItemsService {
     this.itemsSubject.next(this.items.slice());
   }
 
-  orderItemBy(sort: string) {
-    //this.items.sort((a,b) => a.sort )
+  orderItemByPrice() {
+
+    this.items.sort(function (a, b) {
+
+      return a.price - b.price;
+
+    });
+
+  }
+/*
+  orderItemByRating() {
+    this.items.sort((a,b) => a.sort(
+      a.rate - b.rate //order by rate
+    ));
   }
 
+  orderItemByBrand() {
+    this.items.sort((a,b) => a.sort(
+      a.brand - b.brand //order by rate
+    ));
+  }
+*/
   // Permet de filtrer l'affichage des produits, filtres cummulables
   filterItemsDisplay(filter: string) {
     //init en cas de cumulation de filtres

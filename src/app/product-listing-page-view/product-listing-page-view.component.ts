@@ -12,6 +12,7 @@ export class ProductListingPageViewComponent implements OnInit {
 
   items: Item[];
   itemsSubscription: Subscription;
+  filterShow = false;
 
   constructor(private itemsService: ItemsService) { }
 
@@ -21,10 +22,15 @@ export class ProductListingPageViewComponent implements OnInit {
         this.items = items;
       }
     );
+    console.log('la : '+this.itemsService.orderItemByPrice());
     this.itemsService.emitItems();
   }
 
+  switchDisplayFilter(){
+    this.filterShow = !this.filterShow;
+  }
   filterItems(filter: string) {
+    console.log(filter);
     this.itemsService.filterItemsDisplay(filter);
   }
 

@@ -1,6 +1,35 @@
+  <label for="button-group-sorted">Sorted By : </label>
+  <div class="btn-group" id="button-group-sorted">
+    <button type="button" class="btn btn-link">Price</button>
+    <button type="button" class="btn btn-link">Rating</button>
+    <button type="button" class="btn btn-link">Brand</button>
+  </div>
+
+  <button class="btn btn-default" (click)="switchDisplayFilter()">Filter By</button>
+  <div class="row" *ngIf="filterShow">
+    <div class="form-check form-check-inline">
+      <input (change)="filterItems('Kitchen')" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Kitchen" >
+      <label class="form-check-label" for="inlineCheckbox1">Kitchen</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input (change)="filterItems('Decor')"class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Decor" >
+      <label class="form-check-label" for="inlineCheckbox2">Decor</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input (change)="filterItems('Luminaire')" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Luminaire">
+      <label class="form-check-label" for="inlineCheckbox3">Luminaire</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input (change)="filterItems('Vase')" class="form-check-input" type="checkbox" id="inlineCheckbox4" value="Vase" >
+      <label class="form-check-label" for="inlineCheckbox4">Vase</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input (change)="filterItems('Musique')" class="form-check-input" type="checkbox" id="inlineCheckbox5" value="Musique" >
+      <label class="form-check-label" for="inlineCheckbox5">Musique</label>
+    </div>
+  </div>
+
 <ul>
-  <button (click)="filterItems('Luminaire')">Filtre Luminaire</button>
-  <button (click)="filterItems('Decor')">Filtre Decor</button>
   <app-item *ngFor="let item of items"
             [id] = "item.id"
             [name]="item.name"
