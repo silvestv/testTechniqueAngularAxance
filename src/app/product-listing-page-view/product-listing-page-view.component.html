@@ -1,10 +1,11 @@
 <div class="container-product-list">
 
   <div class="row align-items-center">
-    <div class="col-2 ">
-      <h6>Home - H2</h6>
+    <div class="col-sm-3">
+      <h6 class="indicate-page-locate">Home - H2</h6>
     </div>
-    <div class="col-4  offset-6">
+    <br>
+    <div class="col-sm-9 text-right">
       <label for="button-group-sorted">Sorted By : </label>
       <div class="btn-group" id="button-group-sorted">
 
@@ -16,13 +17,13 @@
   </div>
 
   <div class="row align-items-center">
-    <div class="col-8 offset-1">
+    <div class="col-sm-3 offset-sm-1">
       <div id="displayFilters" class="row">
-        <h3>Home Decor</h3>
+        <h3 class="title-section">Home Decor</h3>
         <button *ngFor="let filtre of filters" (click)="filterItems(filtre)" class="btn btn-light btn-small" >&times;{{filtre}}</button>
       </div>
     </div>
-    <div class="col-3">
+    <div class="col-sm-8 text-right">
       <button class="btn btn-outline-dark" (click)="switchDisplayFilter()">Filter By</button>
       <div id="filter-choice" class="row" *ngIf="filterShow">
         <div class="form-check form-check-inline">
@@ -55,16 +56,32 @@
   </div>
 
 
-  <ul>
-    <app-item *ngFor="let item of items"
-              [id] = "item.id"
-              [name]="item.name"
-              [brand]="item.brand"
-              [collection]="item.collection"
-              [imgUrl]="item.imgUrl"
-              [price]="item.price"
-              [rate]="item.rate"></app-item>
-  </ul>
+  <div class="container-fluid container-items">
+    <div class="card-deck justify-content-center">
+      <app-item class="item-card" *ngFor="let item of items"
+                [id] = "item.id"
+                [name]="item.name"
+                [brand]="item.brand"
+                [collection]="item.collection"
+                [imgUrl]="item.imgUrl"
+                [price]="item.price"
+                [rate]="item.rate"></app-item>
+    </div>
 
+  </div>
+
+  <footer>
+    <div class="row">
+      <div class="col text-left">
+        <a>Previous</a>
+      </div>
+      <div class="col text-center">
+        <p>3 / 4</p>
+      </div>
+      <div class="col text-right">
+        <a>Next</a>
+      </div>
+    </div>
+  </footer>
 
 </div>
