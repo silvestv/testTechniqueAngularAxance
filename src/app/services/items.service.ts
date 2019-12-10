@@ -12,7 +12,8 @@ export class ItemsService {
   private items: Item[] = ItemJson;
   private filters: string[] = [];
   itemsSubject = new Subject<Item[]>() ;
-
+  filterSubject = new Subject<string[]>();
+  //selon les versions d'angular on peut avoir le besoin de passer par HTTPClient
 /*
   constructor(private http: HttpClient) {
     this.getJSON().subscribe(data => {
@@ -33,31 +34,44 @@ export class ItemsService {
     this.itemsSubject.next(this.items.slice());
   }
 
+
+  emitfilters(){
+    this.filterSubject.next(this.filters.slice());
+  }
+
   orderItemByPrice() {
-
-    this.items.sort(function (a, b) {
-
-      return a.price - b.price;
-
+    this.items.sort(function(a, b) {
+      return a.price - b.price; //order by price asc
     });
+    this.emitItems();
+  }
 
+
+  orderItemByRate() {
+    this.items.sort(function(a, b) {
+      return b.rate - a.rate; //order by rate desc
+    });
+    this.emitItems();
   }
-/*
-  orderItemByRating() {
-    this.items.sort((a,b) => a.sort(
-      a.rate - b.rate //order by rate
-    ));
-  }
+
 
   orderItemByBrand() {
-    this.items.sort((a,b) => a.sort(
-      a.brand - b.brand //order by rate
-    ));
+    //order by brand (string traitement) asc
+    this.items.sort(function(a, b) {
+      if (a.brand < b.brand){
+        return -1;
+      } else if (a.brand > b.brand) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+    this.emitItems();
   }
-*/
+
   // Permet de filtrer l'affichage des produits, filtres cummulables
   filterItemsDisplay(filter: string) {
-    //init en cas de cumulation de filtres
+    // init en cas de cumulation de filtres
     this.items = ItemJson;
     // on met à jour les filtres actifs
     // si on reclique sur un filtre actif, celui-ci est retiré
@@ -66,16 +80,18 @@ export class ItemsService {
     } else {
       this.filters.splice( this.filters.indexOf(filter), 1);
     }
-    console.log(this.filters);
 
-    //si il n'y a aucun filtre
-    if(this.filters.length === 0){
+    // si il n'y a aucun filtre
+    if (this.filters.length === 0) {
       this.emitItems();
     } else {
       const display = this.items.filter(item => (this.filters.indexOf(item.collection) > -1) );
       this.items = display;
       this.emitItems();
+      console.log("la"+this.filters);
     }
+    this.emitfilters();
   }
+
 
 }

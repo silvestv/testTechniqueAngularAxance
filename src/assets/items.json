@@ -16,5 +16,104 @@
     "collection": "Luminaire",
     "imgUrl": "../../assets/images/items/lamp1.jpg",
     "rate": 2
+  },
+  {
+    "id": 3,
+    "name": "Lampb",
+    "brand": "Conforama",
+    "price": 40,
+    "collection": "Luminaire",
+    "imgUrl": "../../assets/images/items/lamp2.jpg",
+    "rate": 3
+  },
+  {
+    "id": 4,
+    "name": "Lampc",
+    "brand": "Ikea",
+    "price": 140,
+    "collection": "Luminaire",
+    "imgUrl": "../../assets/images/items/lamp3.jpg",
+    "rate": 4
+  },
+  {
+    "id": 5,
+    "name": "Mug",
+    "brand": "But",
+    "price": 10,
+    "collection": "Kitchen",
+    "imgUrl": "../../assets/images/items/mug1.jpg",
+    "rate": 1
+  },
+  {
+    "id": 6,
+    "name": "Piano Luxe",
+    "brand": "Yamaha",
+    "price": 150000,
+    "collection": "Musique",
+    "imgUrl": "../../assets/images/items/piano1.jpeg",
+    "rate": 5
+  },
+  {
+    "id": 7,
+    "name": "Theière",
+    "brand": "MasterChef",
+    "price": 30,
+    "collection": "Kitchen",
+    "imgUrl": "../../assets/images/items/teapot1.jpg",
+    "rate": 4
+  },
+  {
+    "id": 8,
+    "name": "Vase",
+    "brand": "Interior",
+    "price": 65,
+    "collection": "Vase",
+    "imgUrl": "../../assets/images/items/vase1.jpeg",
+    "rate": 1
+  },
+  {
+    "id": 9,
+    "name": "Vaseb",
+    "brand": "Amazon",
+    "price": 25,
+    "collection": "Vase",
+    "imgUrl": "../../assets/images/items/vase2.jpeg",
+    "rate": 2
+  },
+  {
+    "id": 10,
+    "name": "Vasec",
+    "brand": "cuisinella",
+    "price": 55,
+    "collection": "Vase",
+    "imgUrl": "../../assets/images/items/vase3.jpeg",
+    "rate": 4
+  },
+  {
+    "id": 11,
+    "name": "Vased",
+    "brand": "Ikea",
+    "price": 20,
+    "collection": "Vase",
+    "imgUrl": "../../assets/images/items/vase4.jpeg",
+    "rate": 5
+  },
+  {
+    "id": 12,
+    "name": "Violon luxe",
+    "brand": "stradivarius",
+    "price": 100000,
+    "collection": "Musique",
+    "imgUrl": "../../assets/images/items/violon1.jpg",
+    "rate": 4
+  },
+  {
+    "id": 13,
+    "name": "Boite en bois",
+    "brand": "Nature&Decouverte",
+    "price": 75,
+    "collection": "Decor",
+    "imgUrl": "../../assets/images/items/woodenbox1.jpg",
+    "rate": 3
   }
 ]
