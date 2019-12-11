@@ -4,15 +4,58 @@
 .shop-window{
   width: 100%;
   position: relative;
+  mat-nav-list {
+    a:focus {
+      background-color: lightgray;
+    }
 
+    .active {
+      background-color: lightgray;
+    }
+  }
 
+  .svg-container{
+    margin-top: 40px;
+    height: 200px;
 
+    .checked{
+      fill: cadetblue;
+      opacity: 0.3;
+    }
+    .col-sm-5{
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      vertical-align: middle;
+      overflow: hidden;
+    }
+    .col-sm-6{
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      vertical-align: middle;
+      overflow: hidden;
+      .hack{
+        padding-left: 50%;
+      }
+    }
+    .svg-content {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+  }
   @media screen and (min-width: 600px){
      .list-menu-horizontal{
        width: 25%;
        display: inline-block;
      }
     #slideshow-container{
+      margin-top: 30px;
       width: 60%;
       display: inline-block;
     }
@@ -32,27 +75,7 @@
       }
     }
   }
-
-  mat-nav-list {
-    a:focus {
-      background-color: lightgray;
-    }
-
-    .active {
-      background-color: lightgray;
-    }
-  }
-
-  .svg-container{
-    .checked{
-      fill: lightgray;
-      opacity: 0.3;
-    }
-  }
 }
 
-.eloign{
-  height: 1200px;
-}
 
 

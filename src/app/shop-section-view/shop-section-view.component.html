@@ -12,25 +12,28 @@
         <app-slide-show></app-slide-show>
       </div>
 
-      <div class="svg-container indoor">
-        <svg  version="1.1" class="svg-content">
-          <rect [ngClass]="{'checked': this.filter==='in'}" id="indoor-clickable"
-                fill="black" stroke="black" stroke-width="3" stroke-miterlimit="3" height="100%" width="100%" opacity="1"  (click)="setDisplaySlideInOut('in')"/>
-        </svg>
+    <button class="btn btn-success" routerLink="/productListing">Shop Now</button>
 
+      <div class="row svg-container">
+        <div class="col-sm-6">
+          <svg  version="1.1" class="svg-content hack" viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet">
+            <rect [ngClass]="{'checked': this.filter==='in'}" fill="lightgray"
+                  height="50px" width="60px" opacity="1" (click)="setDisplaySlideInOut('in')"/>
+          </svg>
+        </div>
+        <div class="col-sm-5 offset-1">
+          <svg  version="1.1" class="svg-content" viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet">
+            <rect [ngClass]="{'checked': this.filter==='out'}" fill="lightgray"
+                  height="60px" width="60px" opacity="1" (click)="setDisplaySlideInOut('out')"/>
+          </svg>
+        </div>
       </div>
 
 
-      <div class="svg-container outdoor" >
-        <svg  version="1.1" lass="svg-content">
-          <rect [ngClass]="{'checked': this.filter==='out'}" fill="red" stroke="black" stroke-width="3" stroke-miterlimit="3" height="100%" width="100%" opacity="1" (click)="setDisplaySlideInOut('out')"/>
-        </svg>
-      </div>
 
-      <button class="btn btn-success" routerLink="/productListing">Shop Now</button>
+
 
   </div>
-  <div class="eloign"></div>
   <app-popular-section-view></app-popular-section-view>
   <app-collections-section-view></app-collections-section-view>
 </section>
