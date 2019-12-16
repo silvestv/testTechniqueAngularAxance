@@ -1,5 +1,5 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
-import {ActivatedRoute, Route, Router} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {SlideshowService} from '../../services/slideshow.service';
 import {stringify} from 'querystring';
 
@@ -13,12 +13,18 @@ export class ShopSectionViewComponent implements OnInit {
   id: string;
   filter: string;
 
-  constructor(private slideshowService: SlideshowService) { }
+  constructor(private slideshowService: SlideshowService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    //par défaut
-    this.id = 'hf';
+    // par défaut
+    const routeActive: string = this.route.snapshot.params.id;
     this.filter = 'in';
+    if(routeActive === null || routeActive === undefined){
+      this.id = 'hf';
+    } else {
+      this.id = routeActive;
+    }
+
     this.slideshowService.setContentSlideshow(this.filter, this.id);
   }
 

@@ -133,7 +133,6 @@ export class ItemsService {
       }
     }
     this.collections = displayCollection;
-    console.log(this.collections)
     this.emitCollections();
   }
 

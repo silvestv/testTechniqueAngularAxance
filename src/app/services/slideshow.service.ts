@@ -27,17 +27,17 @@ export class SlideshowService {
   // home furnishing outdoor image
   private imagehfo1: IImage = {
     url:  '../../assets/images/slideshow/hfo1.jpg',
-    caption: 'un beau canapé',
+    caption: 'un beau banc',
   };
 
   private imagehfo2: IImage = {
     url:  '../../assets/images/slideshow/hfo2.jpeg',
-    caption: 'un beau bureau',
+    caption: 'une belle chaise',
   };
 
   private imagehfo3: IImage = {
-    url:  '../../assets/images/slideshow/hfo3.jpeg',
-    caption: 'un beau lit',
+    url:  '../../assets/images/slideshow/hfo3.jpg',
+    caption: 'une belle chaise de camping',
   };
 
   // accessorie indoor image
@@ -54,18 +54,18 @@ export class SlideshowService {
   // accessorie outdoor image
   private imageao1: IImage = {
     url:  '../../assets/images/slideshow/accou1.jpeg',
-    caption: 'un beau lit',
+    caption: 'une belle grille',
   };
 
   private imageao2: IImage = {
     url:  '../../assets/images/slideshow/accou2.jpeg',
-    caption: 'un beau canapé',
+    caption: 'des beaux barbecue',
   };
 
   // sport image indoor
   private imagesi1: IImage = {
     url:  '../../assets/images/slideshow/sportin1.jpeg',
-    caption: 'une belle turbine',
+    caption: 'un beau vélo d\'intérieur',
   };
 
   private imagesi2: IImage = {
@@ -76,13 +76,13 @@ export class SlideshowService {
   // sport image outdoor
   private imageso1: IImage = {
     url:  '../../assets/images/slideshow/sportout1.jpeg',
-    caption: 'un beau lit',
+    caption: 'des belles cages de foot',
   };
 
 
   private imageso2: IImage = {
     url:  '../../assets/images/slideshow/sportout2.jpeg',
-    caption: 'un beau lit',
+    caption: 'une beau trampoline',
   };
 
   // clothes image indoor
@@ -100,13 +100,13 @@ export class SlideshowService {
   // clothes image outdoor
   private imageclo1: IImage = {
     url:  '../../assets/images/slideshow/clothout1.jpg',
-    caption: 'un beau lit',
+    caption: 'Un costume grenouille',
   };
 
 
   private imageclo2: IImage = {
     url:  '../../assets/images/slideshow/clothout2.jpeg',
-    caption: 'un beau lit',
+    caption: 'une pub ajax',
   };
 
   // Serialization des datas
