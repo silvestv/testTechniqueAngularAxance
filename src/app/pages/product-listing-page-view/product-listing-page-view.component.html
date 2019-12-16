@@ -25,7 +25,7 @@
       </div>
       <div class="col-sm-8 text-right">
         <button class="btn btn-outline-dark" (click)="switchDisplayFilter()">Filter By</button>
-        <div id="filter-choice" class="row" *ngIf="filterShow">
+        <div id="filter-choice" class="row justify-content-end" *ngIf="filterShow">
           <div class="form-check form-check-inline">
             <input (change)="filterItems('Kitchen')" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Kitchen"
                    [checked]="filters.includes('Kitchen')" >
@@ -70,7 +70,7 @@
 
     </div>
   </div>
-  </body>
+</body>
 <footer class="container">
   <div class="row">
     <div class="col text-left">
@@ -84,4 +84,4 @@
     </div>
   </div>
 </footer>
-
+<app-popin-modal id="apm"></app-popin-modal>

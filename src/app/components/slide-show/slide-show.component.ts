@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {IImage} from 'ng-simple-slideshow';
-import {SlideshowService} from '../services/slideshow.service';
+import {SlideshowService} from '../../services/slideshow.service';
 import {Subscription} from 'rxjs';
 
 @Component({

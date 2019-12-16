@@ -27,6 +27,7 @@
     "hammerjs": "^2.0.8",
     "httpclient": "^0.1.0",
     "ng-simple-slideshow": "^1.2.9",
+    "ngb-modal": "^2.0.3",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

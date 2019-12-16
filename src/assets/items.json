@@ -92,7 +92,7 @@
   {
     "id": 10,
     "name": "Vasec",
-    "brand": "cuisinella",
+    "brand": "Cuisinella",
     "price": 55,
     "collection": "Vase",
     "imgUrl": "../../assets/images/items/vase3.jpeg",
@@ -112,7 +112,7 @@
   {
     "id": 12,
     "name": "Violon luxe",
-    "brand": "stradivarius",
+    "brand": "Stradivarius",
     "price": 100000,
     "collection": "Musique",
     "imgUrl": "../../assets/images/items/violon1.jpg",

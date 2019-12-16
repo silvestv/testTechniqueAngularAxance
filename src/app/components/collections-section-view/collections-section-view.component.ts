@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ItemsService} from "../services/items.service";
-import {Item} from "../models/item.model";
+import {ItemsService} from "../../services/items.service";
+import {Item} from "../../models/item.model";
 import {Subscription} from "rxjs";
 
 @Component({

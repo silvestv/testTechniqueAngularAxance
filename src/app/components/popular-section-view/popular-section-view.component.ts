@@ -1,6 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {Item} from '../models/item.model';
-import {ItemsService} from '../services/items.service';
+import {Item} from '../../models/item.model';
+import {ItemsService} from '../../services/items.service';
 import {Subscription} from 'rxjs';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 
@@ -19,7 +19,6 @@ export class PopularSectionViewComponent implements OnInit {
     this.itemsPopularSubscription = this.itemsService.itemsSubject.subscribe(
       (items: any[]) => {
         this.itemsPopular = items;
-        console.log("la", this.itemsPopular)
       });
     this.breakpointObserver.observe([ '(min-width: 579px)' ])
       .subscribe(state => {

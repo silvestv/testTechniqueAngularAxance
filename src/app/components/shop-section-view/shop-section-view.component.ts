@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {ActivatedRoute, Route, Router} from '@angular/router';
-import {SlideshowService} from '../services/slideshow.service';
+import {SlideshowService} from '../../services/slideshow.service';
 import {stringify} from 'querystring';
 
 // @ts-ignore
