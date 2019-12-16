@@ -11,8 +11,12 @@
   <p>{{rate}}</p>
 </li>-->
 
-  <div class="card">
-    <img class="card-img-top" src="{{imgUrl}}" alt="Card image cap">
+  <div class="card table-responsive-sm">
+    <figure>
+      <figcaption class="hot-mention" *ngIf="isHot"><span>HOT</span></figcaption>
+      <img class="card-img-top" src="{{imgUrl}}" alt="Card image cap">
+    </figure>
+
     <div class="card-body">
       <h5 class="card-title">{{name}}</h5>
       <p class="card-text">{{collection}} <span> {{brand}}</span></p>

@@ -1,19 +1,22 @@
 
 import {Observable, Subject} from 'rxjs';
 import {Item} from '../models/item.model';
-import {Injectable, OnInit} from '@angular/core';
+import {HostListener, Injectable, OnInit} from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import ItemJson from '../../assets/items.json';
 @Injectable()
 export class ItemsService {
 
-  private a: any[] = [];
-  // private s: string = JSON.stringify(ItemJson);
+  // Les items pour la page product & la section popular
   private items: Item[] = ItemJson;
+  private  collections: Item[] = [];
   private filters: string[] = [];
   itemsSubject = new Subject<Item[]>() ;
   filterSubject = new Subject<string[]>();
-  //selon les versions d'angular on peut avoir le besoin de passer par HTTPClient
+  collectionSubject = new Subject<Item[]>();
+
+
+  // selon les versions d'angular on peut avoir le besoin de passer par HTTPClient
 /*
   constructor(private http: HttpClient) {
     this.getJSON().subscribe(data => {
@@ -30,18 +33,23 @@ export class ItemsService {
   }
 
  */
+
+
   emitItems() {
     this.itemsSubject.next(this.items.slice());
   }
 
+  emitCollections() {
+    this.collectionSubject.next(this.collections.slice());
+  }
 
-  emitfilters(){
+  emitfilters() {
     this.filterSubject.next(this.filters.slice());
   }
 
   orderItemByPrice() {
     this.items.sort(function(a, b) {
-      return a.price - b.price; //order by price asc
+      return a.price - b.price; // order by price asc
     });
     this.emitItems();
   }
@@ -49,16 +57,16 @@ export class ItemsService {
 
   orderItemByRate() {
     this.items.sort(function(a, b) {
-      return b.rate - a.rate; //order by rate desc
+      return b.rate - a.rate; // order by rate desc
     });
     this.emitItems();
   }
 
 
   orderItemByBrand() {
-    //order by brand (string traitement) asc
+    // order by brand (string traitement) asc
     this.items.sort(function(a, b) {
-      if (a.brand < b.brand){
+      if (a.brand < b.brand) {
         return -1;
       } else if (a.brand > b.brand) {
         return 1;
@@ -88,10 +96,45 @@ export class ItemsService {
       const display = this.items.filter(item => (this.filters.indexOf(item.collection) > -1) );
       this.items = display;
       this.emitItems();
-      console.log("la"+this.filters);
+      console.log('la' + this.filters);
     }
     this.emitfilters();
   }
 
+
+  popularItem(widthScreen?) {
+    // on selectionne les 8 items les plus populaire (les plus achetés)
+    this.items.sort((a, b) => (
+      b.popular - a.popular
+    ));
+
+    // Si la taille de l'écran n'est pas small
+    // alors on affiche tout les items par ordre de popularité
+    // sinon on en affiche 6 qu'on rangera dans un carrousel pour des raisons ergonomiques
+    if (widthScreen === 'normal') {
+      this.itemsSubject.next(this.items.slice(0, 12));
+    } else {
+      this.itemsSubject.next(this.items.slice(0, 6));
+    }
+  }
+
+  // renvoie un array d'item porte-étendard d'une collection de manière dynamique
+  collectionItem(widthScreen?) {
+    const displayCollection: Item[] = [];
+    for (const item of this.items) {
+      if (displayCollection.length === 0) {
+        displayCollection.push(item);
+      } else {
+        // si on trouve que la collection de l'objet item courant
+        // n'existe pas dans la displayCollection
+        if (displayCollection.find(valueExisting => valueExisting.collection === item.collection) === undefined) {
+          displayCollection.push(item);
+        }
+      }
+    }
+    this.collections = displayCollection;
+    console.log(this.collections)
+    this.emitCollections();
+  }
 
 }

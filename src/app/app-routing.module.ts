@@ -5,7 +5,7 @@ import {ProductListingPageViewComponent} from './product-listing-page-view/produ
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/productListing', pathMatch: 'full'},
+  {path: '', redirectTo: '/home/hf', pathMatch: 'full'},
   {path: 'home', component: HomePageViewComponent},
   {path: 'home/:id', component: HomePageViewComponent},
   {path: 'productListing', component: ProductListingPageViewComponent}
@@ -15,7 +15,6 @@ const routes: Routes = [
 
 const routerOptions: ExtraOptions = {
   anchorScrolling: 'enabled',
-  onSameUrlNavigation: 'reload',
   scrollPositionRestoration: 'enabled'
 };
 

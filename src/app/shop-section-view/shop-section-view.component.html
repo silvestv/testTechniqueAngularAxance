@@ -12,13 +12,18 @@
         <app-slide-show></app-slide-show>
       </div>
 
-    <button class="btn btn-success" routerLink="/productListing">Shop Now</button>
+    <div class="row btn-container">
+      <div class="col-12">
+        <button class="btn btn-success" routerLink="/productListing">Shop Now</button>
+      </div>
+    </div>
 
+      <!--
       <div class="row svg-container">
         <div class="col-sm-6">
-          <svg  version="1.1" class="svg-content hack" viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet">
+          <svg  version="1.1" class="svg-content hack" viewBox="0 0 60 60" preserveAspectRatio="xMinYMin meet">
             <rect [ngClass]="{'checked': this.filter==='in'}" fill="lightgray"
-                  height="50px" width="60px" opacity="1" (click)="setDisplaySlideInOut('in')"/>
+                  height="60px" width="60px" opacity="1" (click)="setDisplaySlideInOut('in')"/>
           </svg>
         </div>
         <div class="col-sm-5 offset-1">
@@ -29,11 +34,29 @@
         </div>
       </div>
 
+    <div class="row svg-container-shadow">
+      <div class="col-5">
+        <svg  version="1.1" class="svg-content" viewBox="0 0 60 60" preserveAspectRatio="xMinYMin meet">
+          <rect [ngClass]="{'checked': this.filter==='in'}" fill="lightgray"
+                height="60px" width="60px" opacity="1" (click)="setDisplaySlideInOut('in')"/>
+        </svg>
+      </div>
+      <div class="col-5 offset-2">
+        <svg  version="1.1" class="svg-content hack" viewBox="0 0 60 60" preserveAspectRatio="xMinYMin meet">
+          <rect [ngClass]="{'checked': this.filter==='out'}" fill="lightgray"
+                height="60px" width="60px" opacity="1" (click)="setDisplaySlideInOut('out')"/>
+        </svg>
+      </div>
+    </div>
 
+    -->
 
 
 
   </div>
-  <app-popular-section-view></app-popular-section-view>
-  <app-collections-section-view></app-collections-section-view>
+
+      <app-popular-section-view></app-popular-section-view>
+    <app-collections-section-view></app-collections-section-view>
+
+
 </section>

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Collection",
+    "collectionName": "Lamp",
+    "imgUrl": "../../assets/images/items/lamp1.jpg"
+  },
+  {
+    "title": "Collection",
+    "collectionName": "Vase",
+    "imgUrl": "../../assets/images/items/vase1.jpeg"
+  },
+  {
+    "title": "Collection",
+    "collectionName": "Intrument",
+    "imgUrl": "../../assets/images/items/piano1.jpeg"
+  },
+  {
+    "title": "Collection",
+    "collectionName": "Wall Clock",
+    "imgUrl": "../../assets/images/items/clock1.jpg"
+  }
+]

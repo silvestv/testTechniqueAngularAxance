@@ -6,5 +6,6 @@ export class Item {
               public price: number,
               public collection: string,
               public imgUrl: string,
-              public rate: number) {}
+              public rate: number,
+              public popular: number) {}
 }

@@ -1,3 +1,50 @@
 <section id="collections">
-  <p>Collection works</p>
+  <div class="row align-items-center">
+    <h5 id="collections-title">Collections</h5>
+    <span>SHOP</span>
+  </div>
+  <div class="container-fluid">
+    <!-- 3 cas possible si la collection est première, si elle est paire ou impaire
+    display diffèrenr -->
+
+    <div class="collection-container" *ngFor="let collection of itemsCollection; let i = index" [ngClass]="{'first-collection': i===0}">
+      <div *ngIf="i === 0" class="row">
+        <div class="col-sm-3" text-left>
+          <p  class="collection-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+        </div>
+        <div class="col-sm-7 offset-sm-2 align-items-center">
+          <div class="row">
+            <img src="{{collection.imgUrl}}" alt="une collection">
+            <div class="offset-1 align-self-center">
+              <span class="shop-collection">COLLECTION</span>
+              <h5>{{collection.collection}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="i !== 0" class="row">
+        <div *ngIf="i%2 == 0" class="col-sm-7 offset-sm-5 align-items-center">
+          <div class="row">
+            <img src="{{collection.imgUrl}}" alt="une collection">
+            <div class="offset-1 align-self-center">
+              <span class="shop-collection">COLLECTION</span>
+              <h5>{{collection.collection}}</h5>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="i%2 === 1" class="col-sm-7 align-items-center">
+          <div class="row">
+            <img src="{{collection.imgUrl}}" alt="une collection">
+            <div class="offset-1 align-self-center">
+              <span class="shop-collection">COLLECTION</span>
+              <h5>{{collection.collection}}</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </section>

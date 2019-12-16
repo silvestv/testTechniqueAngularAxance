@@ -6,7 +6,8 @@
     "price": 50,
     "collection": "Decor",
     "imgUrl": "../../assets/images/items/clock1.jpg",
-    "rate": 5
+    "rate": 5,
+    "popular": 120
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "price": 80,
     "collection": "Luminaire",
     "imgUrl": "../../assets/images/items/lamp1.jpg",
-    "rate": 2
+    "rate": 2,
+    "popular": 432
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "price": 40,
     "collection": "Luminaire",
     "imgUrl": "../../assets/images/items/lamp2.jpg",
-    "rate": 3
+    "rate": 3,
+    "popular": 0
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "price": 140,
     "collection": "Luminaire",
     "imgUrl": "../../assets/images/items/lamp3.jpg",
-    "rate": 4
+    "rate": 4,
+    "popular": 56
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "price": 10,
     "collection": "Kitchen",
     "imgUrl": "../../assets/images/items/mug1.jpg",
-    "rate": 1
+    "rate": 1,
+    "popular": 145
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "price": 150000,
     "collection": "Musique",
     "imgUrl": "../../assets/images/items/piano1.jpeg",
-    "rate": 5
+    "rate": 5,
+    "popular": 147
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "price": 30,
     "collection": "Kitchen",
     "imgUrl": "../../assets/images/items/teapot1.jpg",
-    "rate": 4
+    "rate": 4,
+    "popular": 178
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "price": 65,
     "collection": "Vase",
     "imgUrl": "../../assets/images/items/vase1.jpeg",
-    "rate": 1
+    "rate": 1,
+    "popular": 98
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "price": 25,
     "collection": "Vase",
     "imgUrl": "../../assets/images/items/vase2.jpeg",
-    "rate": 2
+    "rate": 2,
+    "popular": 321
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "price": 55,
     "collection": "Vase",
     "imgUrl": "../../assets/images/items/vase3.jpeg",
-    "rate": 4
+    "rate": 4,
+    "popular": 322
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "price": 20,
     "collection": "Vase",
     "imgUrl": "../../assets/images/items/vase4.jpeg",
-    "rate": 5
+    "rate": 5,
+    "popular": 147
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "price": 100000,
     "collection": "Musique",
     "imgUrl": "../../assets/images/items/violon1.jpg",
-    "rate": 4
+    "rate": 4,
+    "popular": 6
   },
   {
     "id": 13,
@@ -114,6 +126,7 @@
     "price": 75,
     "collection": "Decor",
     "imgUrl": "../../assets/images/items/woodenbox1.jpg",
-    "rate": 3
+    "rate": 3,
+    "popular": 67
   }
 ]

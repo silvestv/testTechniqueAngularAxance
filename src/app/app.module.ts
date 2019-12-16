@@ -22,6 +22,9 @@ import {SlideshowService} from './services/slideshow.service';
 import {ItemsService} from './services/items.service';
 import { ItemComponent } from './item/item.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { LayoutModule } from '@angular/cdk/layout';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -52,7 +55,10 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     MatListModule,
     SlideshowModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    LayoutModule,
+    NgbModule,
+    ReactiveFormsModule
 
   ],
   providers: [

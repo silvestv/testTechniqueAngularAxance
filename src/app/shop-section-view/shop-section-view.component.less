@@ -2,54 +2,23 @@
 @import "../../variables.less";
 
 .shop-window{
+
   width: 100%;
+  margin: auto;
   position: relative;
+  #shopTitle{
+    margin-bottom: 20px;
+  }
   mat-nav-list {
     a:focus {
       background-color: lightgray;
     }
-
     .active {
       background-color: lightgray;
     }
   }
 
-  .svg-container{
-    margin-top: 40px;
-    height: 200px;
-
-    .checked{
-      fill: cadetblue;
-      opacity: 0.3;
-    }
-    .col-sm-5{
-      display: inline-block;
-      position: relative;
-      width: 100%;
-      padding-bottom: 100%;
-      vertical-align: middle;
-      overflow: hidden;
-    }
-    .col-sm-6{
-      display: inline-block;
-      position: relative;
-      width: 100%;
-      padding-bottom: 100%;
-      vertical-align: middle;
-      overflow: hidden;
-      .hack{
-        padding-left: 50%;
-      }
-    }
-    .svg-content {
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-  }
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 576px){
      .list-menu-horizontal{
        width: 25%;
        display: inline-block;
@@ -62,8 +31,51 @@
     #shopTitle{
       margin-bottom: 0px;
     }
+    .svg-container {
+      margin-top: 40px;
+      height: 200px;
+      .checked{
+        fill: cadetblue;
+        opacity: 0.3;
+      }
+      .col-sm-5{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+        vertical-align: middle;
+        overflow: hidden;
+      }
+      .col-sm-6{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+        vertical-align: middle;
+        overflow: hidden;
+        .hack{
+          padding-left: 50%;
+        }
+      }
+      .svg-content {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    .svg-container-shadow{
+      display: none;
+    }
+    .btn-container{
+      .col-12{
+        text-align: right;
+        margin-top: 20px;
+        padding-right: 15%;
+      }
+    }
   }
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 576px){
     .list-menu-horizontal {
       padding: 0;
 
@@ -74,8 +86,29 @@
         font-size: @sizeSelectSlideMobileScreen;
       }
     }
+    .svg-container{
+      display: none;
+    }
+    .svg-container-shadow{
+      margin-top: 20px;
+      .checked{
+        fill: cadetblue;
+        opacity: 0.3;
+      }
+    }
+    .btn-container{
+      .col-12{
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
   }
 }
+
+.container-fluid{
+  padding-top: 30px;
+}
+
 
 
 

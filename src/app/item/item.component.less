@@ -1,8 +1,25 @@
+@import "../../variables.less";
 .card{
   width: 250px;
   margin-top: 20px;
   border: none;
-
+  .hot-mention{
+    text-align: right;
+    padding-top: 20px;
+    span {
+      border: 1px solid black;
+      margin-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 10px;
+      padding-left: 10px;
+      border-radius: 2px;
+      font-size: @sizeMentionLimited;
+    }
+  }
+  .card-img-top{
+    margin-top: 5px;
+  }
   @media (max-width: 576px){
     width: 100%;
   }

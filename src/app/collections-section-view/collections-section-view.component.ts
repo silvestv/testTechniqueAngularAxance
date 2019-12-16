@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ItemsService} from "../services/items.service";
+import {Item} from "../models/item.model";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-collections-section-view',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollectionsSectionViewComponent implements OnInit {
 
-  constructor() { }
+  itemsCollection: Item[];
+  itemsCollectionSubscription: Subscription;
+  constructor(private itemsService: ItemsService) { }
 
   ngOnInit() {
+   this.itemsCollectionSubscription = this.itemsService.collectionSubject.subscribe(
+      (collections: Item[]) => {
+        this.itemsCollection = collections;
+      });
+   this.itemsService.collectionItem();
   }
 
 }

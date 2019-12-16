@@ -14,11 +14,24 @@ export class ItemComponent implements OnInit {
   @Input() collection: string;
   @Input() imgUrl: string;
   @Input() rate: number;
+  @Input() popular: number;
+  isHot: boolean = false;
 
 
-  constructor() { }
+  constructor() {
+    //pour l'affichage de la mention Hot sur l'article dans popular section
+    //valeur choisie totalement arbitraire et imaginée
+
+  }
 
   ngOnInit() {
+    this.setHotMention();
+  }
+
+  setHotMention(){
+    if ( this.popular > 300 ) {
+      this.isHot = true;
+    }
   }
 
 }

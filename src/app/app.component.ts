@@ -13,10 +13,6 @@ export class AppComponent implements OnInit{
   constructor(private router: Router) {
   }
   ngOnInit(): void {
-    /*console.log(JSON.stringify(ItemJson));
-    const s = JSON.stringify(ItemJson);
-    const i: Item[] = JSON.parse(s);
-    console.log(i);*/
   }
 
 

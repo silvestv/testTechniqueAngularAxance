@@ -1,0 +1,39 @@
+
+#popular{
+  h5 {
+    margin-left: 20px;
+  }
+  span{
+    font-size: 10px;
+    color: darkgray;
+    margin-left: 20px;
+  }
+  @media screen and (max-width: 576px) {
+    margin-top: 20px;
+    .shadow-normal-screen{
+      display: none;
+    }
+  }
+  @media screen and (min-width: 576px) {
+    margin-top: 40px;
+    .shadow-small-screen{
+      display: none;
+
+    }
+  }
+}
+
+.carousel-control-next-icon{
+  background-color: black;
+}
+
+
+::ng-deep .carousel-control-next-icon{
+    background-color: grey;
+
+  }
+
+::ng-deep .carousel-control-prev-icon{
+  background-color: grey;
+
+}

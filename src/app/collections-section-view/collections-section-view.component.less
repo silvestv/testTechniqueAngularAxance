@@ -1,0 +1,43 @@
+
+#collections{
+  #collections-title{
+    margin-left: 20px;
+  }
+  span{
+    font-size: 10px;
+    color: darkgray;
+    margin-left: 20px;
+  }
+  @media screen and (min-width: 576px) {
+     margin-top: 40px;
+    .collection-container{
+      margin-top: -50px;
+
+    }
+    .first-collection{
+      margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    margin-top: 20px;
+    .collection-container{
+      margin-bottom: 15px;
+      .row {
+        .shop-collection{
+          margin-left: 0;
+        }
+        @media (max-width: 390px){
+          justify-content: center;
+          div.offset-1{
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .first-collection{
+      margin-top: 20px;
+    }
+  }
+}

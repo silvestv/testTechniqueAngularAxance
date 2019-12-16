@@ -1,3 +1,39 @@
 <section id="popular">
-  <p>popular works!</p>
+  <div class="row align-items-center">
+    <h5>Popular</h5>
+    <span>SHOP</span>
+  </div>
+  <div class="shadow-normal-screen">
+    <div class="card-deck">
+      <app-item *ngFor="let item of itemsPopular"
+                [id] = "item.id"
+                [name]="item.name"
+                [brand]="item.brand"
+                [collection]="item.collection"
+                [imgUrl]="item.imgUrl"
+                [price]="item.price"
+                [rate]="item.rate"
+                [popular] = "item.popular">
+      </app-item>
+    </div>
+  </div>
+  <!-- SHADOW CAROUSEL -> se déclenche si le site est en mode mobile -->
+  <div class="shadow-small-screen">
+    <div class="container-fluid">
+      <ngb-carousel  id="popular-slide" [interval]="3000" *ngIf="itemsPopular">
+        <ng-template ngbSlide *ngFor="let item of itemsPopular">
+          <app-item [id] = "item.id"
+                    [name]="item.name"
+                    [brand]="item.brand"
+                    [collection]="item.collection"
+                    [imgUrl]="item.imgUrl"
+                    [price]="item.price"
+                    [rate]="item.rate"
+                    [popular] = "item.popular">
+          </app-item>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
+
 </section>
