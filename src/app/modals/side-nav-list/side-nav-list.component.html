@@ -1,7 +1,7 @@
 <!-- cette nav-list est appelée en tant que side nav bar par le header, elle utilise la propriété
  fragment qui permet de scroller à la section voulue sans changement de route et donc de page-->
 <mat-nav-list>
-  <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+  <a mat-list-item routerLink="/home" (click)="onSidenavClose('home')">
     <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
   </a>
   <a mat-list-item routerLink="/home" fragment="shop" (click)="onSidenavClose('shop')">

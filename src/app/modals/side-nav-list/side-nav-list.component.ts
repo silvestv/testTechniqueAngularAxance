@@ -21,7 +21,8 @@ export class SideNavListComponent implements OnInit {
 
   // ce query selector permet de scroller jusqu'à l'ancre voulue lorqu'on clique sur un item
   // le clic sur item déclenche la fermeture de la side nav bar
-  public onSidenavClose = (anchor: string) => {
+  // pas d'ancre pour un changement de routing donc le paramètre est optionel
+  public onSidenavClose = (anchor?: string) => {
     this.sidenavClose.emit();
     document.querySelector('anchor').scrollIntoView(true);
 
