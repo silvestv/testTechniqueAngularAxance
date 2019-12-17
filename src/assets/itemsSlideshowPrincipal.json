@@ -1,0 +1,117 @@
+// Voici le format de donnée que nous aurions pû utiliser...
+// Très bientôt corrigé
+[
+  {
+    "label": "HfOut",
+    "iimageSlideshow": [
+      {
+        "url":  "./images/slideshow/hfo1.jpg",
+        "caption": "un beau banc"
+      },
+      {
+        "url":  "./images/slideshow/hfo2.jpeg",
+        "caption": "une belle chaise"
+      },
+      {
+        "url":  "./images/slideshow/hfo3.jpg",
+        "caption": "un belle chaise de camping"
+      }
+    ]
+  },
+  {
+    "label": "HfIn",
+    "iimageSlideshow": [
+      {
+        "url":  "./images/slideshow/hf1.jpeg",
+        "caption": "un beau canapé"
+      },
+      {
+        "url":  "./images/slideshow/hf2.jpg",
+        "caption": "une belle table"
+      },
+      {
+        "url":  "./assets/images/slideshow/hf3.jpeg",
+        "caption": "un beau lit"
+      }
+    ]
+  },
+  {
+    "label": "AccOut",
+    "iimageSlideshow": [
+      {
+        "url":  "./images/slideshow/accou1.jpeg",
+        "caption": "une belle grille"
+      },
+      {
+        "url":  "./images/slideshow/accou2.jpeg",
+        "caption": "des beaux barbecue"
+      }
+    ]
+  },
+  {
+    "label": "AccIn",
+    "iimageSlideshow": [
+      {
+        "url":  "./images/slideshow/accin1.jpeg",
+        "caption": "un beau luminion"
+      },
+      {
+        "url":  "./images/slideshow/accin2.jpg",
+        "caption": "une beau portant"
+      }
+    ]
+  },
+  {
+    "label": "SportOut",
+    "iimageSlideshow": [
+      {
+        "url":  "./images/slideshow/sportout1.jpeg",
+        "caption": "des belles cages de foot"
+      },
+      {
+        "url":  "./images/slideshow/sportout2.jpeg",
+        "caption": "un beau trampoline"
+      }
+    ]
+  },
+  {
+    "label": "SportIn",
+    "iimageSlideshow": [
+      {
+        "url":  "./images/slideshow/sportin1.jpeg",
+        "caption": "un beau velo d'intérieur"
+      },
+      {
+        "url":  "./images/slideshow/sportin2.jpeg",
+        "caption": "un beau billard"
+      }
+    ]
+  },
+  {
+    "label": "ClOut",
+    "iimageSlideshow": [
+      {
+        "url":  "../../assets/images/slideshow/clothout1.jpeg",
+        "caption": "un costume grenouille"
+      },
+      {
+        "url":  "../../assets/images/slideshow/clouthout2.jpeg",
+        "caption": "une pub ajax"
+      }
+    ]
+  },
+  {
+    "label": "ClIn",
+    "iimageSlideshow": [
+      {
+        "url":  "../../assets/images/slideshow/clothin1.jpeg",
+        "caption": "un beau étendoire"
+      },
+      {
+        "url":  "../../assets/images/slideshow/clothin2.jpg",
+        "caption": "un beau porte-serviette"
+      }
+    ]
+  }
+
+]

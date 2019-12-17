@@ -7,8 +7,11 @@ import {Subject} from 'rxjs';
 export class SlideshowService {
 
   // DATA SLIDESHOW de type IImage from 'ng-simple-slideshow'
+  // Ces dernières pourraient se retrouver dans un Json tout comme dans ITEMSERVICE
+  // Les IImages sont malheuresement difficilement manipulable
+  // Ce service aurait dû être traité dans un JSON (qui se trouve dans assets )
+  ////////////////////////////////////////////////////////////
   // Home furnishing indoor image
-
   private imagehfi1: IImage = {
     url:  '../../assets/images/slideshow/hf1.jpeg',
     caption: 'un beau canapé',
@@ -153,12 +156,10 @@ export class SlideshowService {
   ];
 
 
-
-
   ///////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////
 
-  // web service
+  // service
 
   private contentSlideshow: IImage[] = [];
   // manipulation des données sous design pattern observable
@@ -175,10 +176,10 @@ export class SlideshowService {
     setContentSlideshow(filter1: string, filter2: string) {
       if (filter1 === 'in') {
         if (filter2 === 'hf') {
-          this.contentSlideshow = this.imageUrlArrayHFIn;
+           this.contentSlideshow = this.imageUrlArrayHFIn;
         } else if (filter2 === 'acc') {
           this.contentSlideshow = this.imageUrlArrayAccIn;
-        } else if (filter2 === 'sp'){
+        } else if (filter2 === 'sp') {
           this.contentSlideshow = this.imageUrlArraySportIn;
         } else {
           this.contentSlideshow = this.imageUrlArrayClothIn;

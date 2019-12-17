@@ -1,5 +1,5 @@
 
-import {Observable, Subject} from 'rxjs';
+import {Subject} from 'rxjs';
 import {Item} from '../models/item.model';
 import {HostListener, Injectable, OnInit} from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
