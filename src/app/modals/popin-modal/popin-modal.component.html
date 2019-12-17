@@ -1,3 +1,8 @@
+<!-- La pop in est un modal qui est présent sur toute les pages -->
+<!-- Sa position est fixed mais son emplacement est redefinit selon les besoins de la page courante dans laquelle
+ cette dernière est appellée-->
+<!-- pas d'utilisation de svg ici pour l'image, car la classe bootstrap img-fluid permet de rendre l'image responsiv -->
+<!--  La balise Modal est définit dans le module (package npm) ModalModule de ngb-modal -->
 <div id="popin" class="row justify-content-end">
   <button id="openModalButton" class="btn btn-dark btn-sm"(click)="openModal()">Need Help ?</button>
   <modal #myModal >

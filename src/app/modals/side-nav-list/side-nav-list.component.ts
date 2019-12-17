@@ -6,7 +6,7 @@ import {Router, RouterEvent, Scroll} from '@angular/router';
   templateUrl: './side-nav-list.component.html',
   styleUrls: ['./side-nav-list.component.less']
 })
-export class SideNavListComponent implements OnInit, AfterViewInit {
+export class SideNavListComponent implements OnInit {
 
   @Output() sidenavClose = new EventEmitter();
   // @ts-ignore
@@ -19,13 +19,13 @@ export class SideNavListComponent implements OnInit, AfterViewInit {
   ngOnInit() {
   }
 
+  // ce query selector permet de scroller jusqu'à l'ancre voulue lorqu'on clique sur un item
+  // le clic sur item déclenche la fermeture de la side nav bar
   public onSidenavClose = (anchor: string) => {
     this.sidenavClose.emit();
-    window.document.querySelector('anchor').scrollIntoView(true);
-  }
-
-  ngAfterViewInit(){
+    document.querySelector('anchor').scrollIntoView(true);
 
   }
+
 
 }

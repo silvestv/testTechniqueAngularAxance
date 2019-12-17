@@ -14,6 +14,12 @@ export class PopinModalComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  //cette méthode permet d'ouvrir un ngbModal selon des propriétés particulières
+  // ! problème relevé !
+  // la propriété backdropClass si définit à backdrop-default permet d'avoir un arrière plan grisé ergonomique
+  // malheuresement, il y a un problème avec le z-index qui met la popin en arrière-plan
+  // Ceci vient certainement du fait que la page soit encapsulée dans un mat-side-nav
   openModal() {
     this.modalRef = this.modalService.open(this.myModal, {
       size: 'lg',
@@ -27,9 +33,11 @@ export class PopinModalComponent implements OnInit {
       backdropClass: 'none'
     });
   }
+  //méthode par défaut utile en cas de button close
+  /*
   closeModal() {
     this.modalService.close(this.modalRef);
     // or this.modalRef.close();
-  }
+  }*/
 
 }

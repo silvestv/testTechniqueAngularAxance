@@ -10,6 +10,11 @@ import {Item} from '../../models/item.model';
 })
 export class ProductListingPageViewComponent implements OnInit {
 
+  // Il y a deux tableaux ici à définir pour la view
+  // nous avons donc 2 souscriptions à 1 seul est même service itemService
+  // nous aurions pu avoir 2 services différents néanmoins le filtrage étant
+  // intimement lié aux items il m'a paru judicieux de ne pas ajouter de la complexité inutilement
+
   items: Item[];
   filters: string[];
   itemsSubscription: Subscription;
@@ -18,6 +23,9 @@ export class ProductListingPageViewComponent implements OnInit {
 
   constructor(private itemsService: ItemsService) { }
 
+  // Lors de l'initialisation du component
+  // on s'abonne au serice item avec les 2 sujets
+  // pour pouvoir observer et afficher les changement de données dans la vue
   ngOnInit() {
     this.itemsSubscription = this.itemsService.itemsSubject.subscribe(
       (items: any[]) => {
@@ -31,20 +39,26 @@ export class ProductListingPageViewComponent implements OnInit {
       }
     );
 
+    // on fait émettre le service pour afficher les datas
     this.itemsService.emitItems();
     this.itemsService.emitfilters();
   }
 
+  // permet d'afficher les filtres après le click du bouton filtre
+  // si on reclique dessus ces derniers disparaîssent
   switchDisplayFilter() {
     this.filterShow = !this.filterShow;
   }
+
+  // Cette fonction appelle le service permettant de trié les items
+  // filterItemsDisplay encapsule l'émission des changement (emitFilter)
+  // c'est pourquoi il est inutile de l'appeler
   filterItems(filter: string) {
-
     this.itemsService.filterItemsDisplay(filter);
-    console.log(this.filters);
-
   }
 
+  // sortItems permet d'ordonné les items par prix, notation ou par marque
+  // sinon on envoit une erreur
   sortItems(sort: string) {
     if (sort === 'brand') {
       this.itemsService.orderItemByBrand();

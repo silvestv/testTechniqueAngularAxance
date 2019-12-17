@@ -47,6 +47,9 @@ export class ItemsService {
     this.filterSubject.next(this.filters.slice());
   }
 
+  // notation différente ici que les fonctions fléchées
+  // autre manière de coder
+  // on utilise la fonction sort
   orderItemByPrice() {
     this.items.sort(function(a, b) {
       return a.price - b.price; // order by price asc

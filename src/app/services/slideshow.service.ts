@@ -159,6 +159,7 @@ export class SlideshowService {
   //////////////////////////////////////////////////////////////
 
   // web service
+
   private contentSlideshow: IImage[] = [];
   // manipulation des données sous design pattern observable
   contentSlideshowSubject = new Subject<IImage[]>();
