@@ -112,7 +112,7 @@ export class ItemsService {
     // alors on affiche tout les items par ordre de popularité
     // sinon on en affiche 6 qu'on rangera dans un carrousel pour des raisons ergonomiques
     if (widthScreen === 'normal') {
-      this.itemsSubject.next(this.items.slice(0, 12));
+      this.itemsSubject.next(this.items.slice(0, 10));
     } else {
       this.itemsSubject.next(this.items.slice(0, 6));
     }

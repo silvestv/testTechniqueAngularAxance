@@ -1,16 +1,6 @@
-<!--
-<li xmlns="http://www.w3.org/1999/html">
-
-  <img src="{{imgUrl}}" alt="" height="200px" width="200px">
-
- <p>{{id}}</p>
-  <p>{{name}}</p>
-  <p>{{brand}}</p>
-  <p>{{collection}}</p>
-  <p>{{price}}</p>
-  <p>{{rate}}</p>
-</li>-->
-
+<!-- Ceci est le template graphique d'un item / certain attribut n'apparaissent pas car inutile -->
+<!-- *ngIf hot décrit si un item a été acheté plus de 300 fois -->
+<!-- Ce template est utilisé par la page product-listing mais aussi dans la section popular de la page Home -->
   <div class="card table-responsive-sm">
     <figure>
       <figcaption class="hot-mention" *ngIf="isHot"><span>HOT</span></figcaption>

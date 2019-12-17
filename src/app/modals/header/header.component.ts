@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-
+  // sur le click du toogle on déclenche l'apparition de la sidenav de angular Material
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
   }

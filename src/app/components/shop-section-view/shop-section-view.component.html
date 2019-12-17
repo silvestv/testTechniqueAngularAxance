@@ -8,6 +8,7 @@
         <a mat-list-item  routerLinkActive="active"  (click)="setDisplaySlide('cl')" routerLink="/home/cl">Clothing</a>
       </mat-nav-list>
 
+    <!-- slideShow component utilise ng-simple-slideshow (package npm) -->
       <div id="slideshow-container">
         <app-slide-show></app-slide-show>
       </div>
@@ -33,6 +34,9 @@
   -->
 
     <!-- solution trouvé -->
+    <!-- ngClass checked change (en less) la couleur du background -->
+    <!-- *ngIf déclenche l'animation des SVGS si ces derniers ont étés cliqués -->
+    <!-- setDisplayInOut change les items montrés dans le slideshow 1 -->
     <div class="row option-indoor-outdoor">
       <div class="col-sm-6  col-md-4 offset-md-2 col-xl-3 offset-xl-3 outdoor-container" [ngClass]="{'checked': this.filter==='out'}" (click)="setDisplaySlideInOut('out')">
         <h4>Outdoors</h4>

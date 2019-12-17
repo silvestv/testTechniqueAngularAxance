@@ -7,6 +7,7 @@ import {Item} from '../../models/item.model';
   styleUrls: ['./item.component.less']
 })
 export class ItemComponent implements OnInit {
+  // chaque attribut sera initialisé par un parent qui boucle sur la liste des items en .json
   @Input() id: number;
   @Input() name: string;
   @Input() brand: string;
@@ -15,20 +16,18 @@ export class ItemComponent implements OnInit {
   @Input() imgUrl: string;
   @Input() rate: number;
   @Input() popular: number;
-  isHot: boolean = false;
+  isHot = false;
 
 
   constructor() {
-    //pour l'affichage de la mention Hot sur l'article dans popular section
-    //valeur choisie totalement arbitraire et imaginée
-
   }
 
   ngOnInit() {
     this.setHotMention();
   }
-
-  setHotMention(){
+  // pour l'affichage de la mention Hot sur l'article dans popular section
+  // valeur choisie totalement arbitraire et imaginée
+  setHotMention() {
     if ( this.popular > 300 ) {
       this.isHot = true;
     }

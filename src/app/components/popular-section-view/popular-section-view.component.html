@@ -17,7 +17,8 @@
       </app-item>
     </div>
   </div>
-  <!-- SHADOW CAROUSEL -> se déclenche si le site est en mode mobile -->
+  <!-- SHADOW CAROUSEL -> se déclenche si le site est en mode mobile,
+  il fera défiler 6 items populaires au lieu de 10 dans la version desktop-->
   <div class="shadow-small-screen">
     <div class="container-fluid">
       <ngb-carousel  id="popular-slide" [interval]="3000" *ngIf="itemsPopular">

@@ -16,6 +16,8 @@ export class SlideShowComponent implements OnInit, OnDestroy {
   constructor(private slideshowService: SlideshowService) {
   }
 
+  //souscription au service slideshow pour afficher les items
+  // en fonction d'un grand nombre de paramètre, filtre dans la shop-section
   ngOnInit() {
     this.imageUrlArraySubscription = this.slideshowService.contentSlideshowSubject.subscribe(
       (contentSlideShow: IImage[]) => {

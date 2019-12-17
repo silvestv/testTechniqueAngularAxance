@@ -4,6 +4,9 @@
       <h3 id="Newsletter-title">Newsletter</h3><br>
       <p>Register now with our newsletter and got the latest update available</p>
     </div>
+    <!-- ici nous avons un formulaire de type ReactiveForm,
+    afin d'avoir un feedback immédiat sur la validation des champs, ces validateurs sont définis
+     dans le fichier .ts-->
     <div class="col-sm-6 offset-sm-1">
       <form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
         <div class="row">
