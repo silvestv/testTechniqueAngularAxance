@@ -36,26 +36,51 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Install
 
+Mettre à jour sa version de nodeJS, npm, Angular CLI, bootstrap
+
+### Mode Developpeur
+
 Run git clone 'le projet'.
+
 Placez-vous dans le répertoire.
+
 Run npm install --save pour importer tout les packages et module de la librairie.
+
 Run ng serve --open pour lancer l'application.
+
 En cas de problème d'affichage : Vérifier le schema styles : [] dans le fichier angular.json , la présence de bootstrap, ainsi que la présence de la balise dans le app-module.
+
+### Déploiement
+Placez-vous dans le répertoire du projet
+
+Run `ng build --prod`
+
+Run `npm install http-server`
+
+Run `http-server dist/test-axance-front-silvestre`
+
 
 ## But du travail effectué
 
 Le but est de concevoir le design d'une landing page d'un site e-commerce cross-plateform (desktop, ios, android). avec comme choix : statique, reactJS, ou angular. 
+
 Selon mes compétences j'ai choisi, Angular 8.
+
 3 pages sont demandées : La home page, product listing page, Pop-in Help.
+
 Affichage des items par service.
 
 ## Travail effectué
 
 ### Structure du travail
 La page home composées de la section shop et newsletter.
+
 La section shop composée de sous-section Popular et Collections.
+
 La page Product Listing, au préalable d'un achat avec divers systèmes de filtrage (plus de détails suite).
+
 La Page Four-Ho-Four redirection des chemins URLs éronnés.
+
 Les Modals Pop-In d'aide & Header side-nav présent sur toutes les pages 
 
 -----------------------------------------------------------------------------------
@@ -98,6 +123,45 @@ Les Modals Pop-In d'aide & Header side-nav présent sur toutes les pages
 ### Scénario de parcours utilisateur
 
 #### Home Page
+
+##### Shop section
+  - Slideshow : 
+  - Contenu Slideshow dynamique par changement de route parameter : 
+  - Svg Animate choice in-out items : 
+
+##### Popular section
+  - Listing dynamique des items populaire : 
+  - Mention hot : 
+  - Slideshow ngb-bootstrap shadowDom pour responsiv : 
+
+##### Collections section
+
+  - Display particulier avec directives structurelles :
+  - Détermination de nouvelles collections par collection : 
+  
+##### Newsletter section
+
+  - Formulaire Reactif :
+
+#### Product Listing Page 
+  - Item Service :
+  - Item data / model :
+  - Filtres / tri :
+  
+#### Pop-In
+
+  - Ngb-modal : 
+
+#### Header
+
+  - Structure : 
+  - Angular material : 
+  - Side-nav-bar : 
+  - Routing : 
+  
+#### Four-Ho-Four
+
+  - Redirection : 
 
 
 -----------------------------------------------------------------------------------
