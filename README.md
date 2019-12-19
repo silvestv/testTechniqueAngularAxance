@@ -51,6 +51,10 @@ Run ng serve --open pour lancer l'application.
 En cas de problème d'affichage : Vérifier le schema styles : [] dans le fichier angular.json , la présence de bootstrap, ainsi que la présence de la balise dans le app-module.
 
 ### Déploiement
+
+!!!!!! ATTENTION !!!! problèmes de routing sur la nav-side-bar au déploiment non détectée
+Solution : useHash ne marche pas car utilisation de fragment
+
 Placez-vous dans le répertoire du projet
 
 Run `ng build --prod`
